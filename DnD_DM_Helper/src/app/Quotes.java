@@ -35,6 +35,8 @@ public class Quotes {
 			return "\"They call me a comet. They call me a dragon. They have no words for my true form.\"";
 		case 15:
 			return "\"I have seen the light too clearly to ever fear the darkness.\"";
+		case 16:
+			return "\"You may not believe but the probability of rolling a d20 is the same as a d1, shocking i know\"";
 		default:
 			return "";
 		}
