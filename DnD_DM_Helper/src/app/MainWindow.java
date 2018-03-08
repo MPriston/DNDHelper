@@ -50,8 +50,7 @@ public class MainWindow {
 		}
 		frmDmHelper = new JFrame();
 		frmDmHelper.setResizable(false);
-		ImageIcon icon = new ImageIcon("Resources\\&transparent.png");
-		frmDmHelper.setIconImage(icon.getImage());
+		frmDmHelper.setIconImage(Toolkit.getDefaultToolkit().getImage(MainWindow.class.getResource("/logos/& Transparent.png")));
 		frmDmHelper.setTitle("Dungeon Master Helper");
 		frmDmHelper.setBounds(100, 100, 1280, 800);
 		frmDmHelper.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,8 +63,7 @@ public class MainWindow {
 		
 		JLabel logoDnd = new JLabel("");
 		logoDnd.setBounds(286, 129, 674, 320);
-		ImageIcon logo = new ImageIcon("Resources\\DD-Transparent-Bege.png");
-		logoDnd.setIcon(logo);
+		logoDnd.setIcon(new ImageIcon(MainWindow.class.getResource("/logos/DD-Transparent-Bege.png")));
 		iniPanel.add(logoDnd);
 		
 		quote = new JLabel(Quotes.quote());
