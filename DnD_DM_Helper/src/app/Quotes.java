@@ -2,7 +2,7 @@ package app;
 
 public class Quotes {
 	public static String quote() {
-		int c = 1 + (int) (Math.random() * ((15 - 1) + 1));
+		int c = 1 + (int) (Math.random() * ((20 - 1) + 1));
 
 		switch (c) {
 		case 1:
@@ -36,7 +36,15 @@ public class Quotes {
 		case 15:
 			return "\"I have seen the light too clearly to ever fear the darkness.\"";
 		case 16:
-			return "\"You may not believe but the probability of rolling a d20 is the same as a d1, shocking i know\"";
+			return "\"You may not believe but the probability of rolling a 20 is the same as a 1, shocking i know\"";
+		case 17:
+			return "\"A paladin sees an undead in the road... correction saw\"";
+		case 18:
+			return "\"I'm rolling to see if i care... ok i care\"";
+		case 19:
+			return "\"I would like to cast Featherfall, for when my team lets me down\"";
+		case 20:
+			return "\"If the DM isn't crying, the wizard is not trying\"";
 		default:
 			return "";
 		}
