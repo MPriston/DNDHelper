@@ -3,13 +3,15 @@ package app;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
 
 
 public class MainWindow {
 
 	private JFrame frmDmHelper;
 	private JPanel iniPanel, formMPanel;
-	private JLabel quote;
+	private JLabel quote, lblStrMod;
 	private JTextField tfMonst;
 	private JTextField tfHpF;
 	private JTextField tfHpB;
@@ -216,6 +218,38 @@ public class MainWindow {
 		lblStr.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
 		lblStr.setBounds(12, 346, 101, 25);
 		formMPanel.add(lblStr);
+		
+		JSpinner sStr = new JSpinner();
+		sStr.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent arg0) {
+				String sm; 
+				int sv = (int)sStr.getValue();
+				int s = (int)sStr.getValue();
+				s-=10;
+				s/=2;
+				if(sv == 9) {
+					sm = "-1";
+				} else if(s<0) {
+					if(sv%2==1) {
+						s-=1;	
+					}
+					sm = String.valueOf(s);
+				} else {
+					sm = "+" + String.valueOf(s);
+				}
+				lblStrMod.setText(sm);
+			}
+		});
+		sStr.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		sStr.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		sStr.setBounds(124, 347, 45, 24);
+		formMPanel.add(sStr);
+		
+		lblStrMod = new JLabel("");
+		lblStrMod.setForeground(new Color(128, 0, 0));
+		lblStrMod.setFont(new Font("Palatino Linotype", Font.BOLD, 20));
+		lblStrMod.setBounds(181, 347, 56, 24);
+		formMPanel.add(lblStrMod);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBackground(new Color(255, 228, 181));
