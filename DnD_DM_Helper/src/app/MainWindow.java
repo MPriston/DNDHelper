@@ -16,11 +16,30 @@ public class MainWindow {
 	private JTextField tfHpF;
 	private JTextField tfHpB;
 	private JTextField tfSpeed;
+	private JComboBox cbAlig, cbSize, cbType;
+	private JSpinner sAC, sHP, sStr;
 	
 	
 	private void falseall() {
 		iniPanel.setVisible(false);
 		formMPanel.setVisible(false);
+	}
+	
+	private void cleanMForm() {
+		tfMonst.setText(null);
+		tfHpF.setText(null);
+		tfHpB.setText(null);
+		tfSpeed.setText(null);
+		
+		cbAlig.setSelectedIndex(0);
+		cbSize.setSelectedIndex(0);
+		cbType.setSelectedIndex(0);
+		
+		sAC.setValue(Integer.parseInt("0"));
+		sHP.setValue(Integer.parseInt("0"));
+		sStr.setValue(Integer.parseInt("0"));
+		
+		lblStrMod.setText(null);
 	}
 	/**
 	 * Launch the application.
@@ -104,9 +123,10 @@ public class MainWindow {
 		lblSize.setBounds(12, 50, 56, 24);
 		formMPanel.add(lblSize);
 		
-		JComboBox cbSize = new JComboBox();
+		cbSize = new JComboBox();
 		cbSize.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		cbSize.setModel(new DefaultComboBoxModel(new String[] {"Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan"}));
+		cbSize.setSelectedIndex(0);
 		cbSize.setBounds(69, 50, 184, 25);
 		formMPanel.add(cbSize);
 		
@@ -116,8 +136,9 @@ public class MainWindow {
 		lblType.setBounds(12, 86, 69, 24);
 		formMPanel.add(lblType);
 		
-		JComboBox cbType = new JComboBox();
+		cbType = new JComboBox();
 		cbType.setModel(new DefaultComboBoxModel(new String[] {"Aberration", "Beast", "Celestial", "Construct", "Dragon", "Elemental", "Fey", "Fiend", "Giant", "Humanoid", "Monstrosity", "Ooze", "Plant", "Undead"}));
+		cbType.setSelectedIndex(0);
 		cbType.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		cbType.setBounds(80, 87, 184, 24);
 		formMPanel.add(cbType);
@@ -129,10 +150,11 @@ public class MainWindow {
 		lblAl.setBounds(12, 123, 129, 25);
 		formMPanel.add(lblAl);
 		
-		JComboBox cbAlig = new JComboBox();
+		cbAlig = new JComboBox();
 		cbAlig.setForeground(new Color(0, 0, 0));
 		cbAlig.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		cbAlig.setModel(new DefaultComboBoxModel(new String[] {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chotic Evil", "Unaligned"}));
+		cbAlig.setSelectedIndex(0);
 		cbAlig.setBounds(139, 125, 184, 25);
 		formMPanel.add(cbAlig);
 		
@@ -142,7 +164,7 @@ public class MainWindow {
 		lblArmorClass.setBounds(12, 161, 141, 24);
 		formMPanel.add(lblArmorClass);
 		
-		JSpinner sAC = new JSpinner();
+		sAC = new JSpinner();
 		sAC.setModel(new SpinnerNumberModel(new Integer(0), null, null, new Integer(1)));
 		sAC.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		sAC.setBounds(160, 162, 45, 24);
@@ -154,7 +176,7 @@ public class MainWindow {
 		lblHp.setBounds(12, 198, 45, 24);
 		formMPanel.add(lblHp);
 		
-		JSpinner sHP = new JSpinner();
+		sHP = new JSpinner();
 		sHP.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		sHP.setBounds(56, 199, 56, 24);
 		formMPanel.add(sHP);
@@ -219,7 +241,7 @@ public class MainWindow {
 		lblStr.setBounds(12, 346, 101, 25);
 		formMPanel.add(lblStr);
 		
-		JSpinner sStr = new JSpinner();
+		sStr = new JSpinner();
 		sStr.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent arg0) {
 				String sm; 
@@ -265,6 +287,7 @@ public class MainWindow {
 		mntmCreateMonster.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				falseall();
+				cleanMForm();
 				formMPanel.setVisible(true);
 			}
 		});
