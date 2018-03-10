@@ -597,3 +597,4 @@ public class MainWindow {
 		mnMonsters.add(mntmSearchMonters);
 	}
 }
+
