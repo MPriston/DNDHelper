@@ -11,7 +11,7 @@ import javax.swing.event.ChangeEvent;
 public class MainWindow {
 
 	private JFrame frmDmHelper;
-	private JPanel iniPanel, formMPanel, formM2Panel, formM3Panel;
+	private JPanel iniPanel, formMPanel, formM2Panel, formM3Panel, formMSpellcaster, formMLegendary;
 	private JLabel quote, label_22, lblStrMod, lblDexMod, lblConMod, lblInteMod, lblWisMod, lblChaMod;
 	private JTextField tfMonst;
 	private JTextField tfHpF;
@@ -66,6 +66,8 @@ public class MainWindow {
 		formMPanel.setVisible(false);
 		formM2Panel.setVisible(false);
 		formM3Panel.setVisible(false);
+		formMSpellcaster.setVisible(true);
+		formMLegendary.setVisible(true);
 	}
 	
 	private void cleanMForm() {
@@ -1725,12 +1727,25 @@ public class MainWindow {
 		formM3Panel.add(label_21);
 		
 		label_22 = new JLabel("Save");
+		label_22.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				if(cbSpellcaster.isSelected()) {
+					falseall();
+					formMSpellcaster.setVisible(true);
+				}
+				if(cbLegendary.isSelected()) {
+					falseall();
+					formMLegendary.setVisible(true);
+				}
+			}
+		});
 		label_22.setForeground(new Color(128, 0, 0));
 		label_22.setFont(new Font("Palatino Linotype", Font.BOLD, 26));
 		label_22.setBounds(1197, 699, 65, 27);
 		formM3Panel.add(label_22);
 		
-		JPanel formMSpellcaster = new JPanel();
+		formMSpellcaster = new JPanel();
 		formMSpellcaster.setBackground(new Color(255, 228, 181));
 		frmDmHelper.getContentPane().add(formMSpellcaster, "name_1630098190459233");
 		formMSpellcaster.setLayout(null);
@@ -1777,6 +1792,10 @@ public class MainWindow {
 		tfSpellToHit.setBounds(1039, 52, 58, 26);
 		formMSpellcaster.add(tfSpellToHit);
 		tfSpellToHit.setColumns(10);
+		
+		formMLegendary = new JPanel();
+		formMLegendary.setBackground(new Color(255, 228, 181));
+		frmDmHelper.getContentPane().add(formMLegendary, "name_1638253162384953");
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBackground(new Color(255, 228, 181));
