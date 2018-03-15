@@ -17,8 +17,8 @@ public class MainWindow {
 	private JTextField tfHpF;
 	private JTextField tfHpB;
 	private JTextField tfSpeed;
-	private JComboBox cbAlig, cbSize, cbType;
-	private JSpinner sAC, sHP, sStr, sDex, sCon, sInte, sWis, sCha, sSTStr, sSTDex, sSTCon, sSTInte, sSTWis, sSTCha, sAcrobatics, sAnimalHand, sArcana, sAtletics, sDeception, sHistory, sInsight, sIntim, sInves, sMedicine, sNature, sPercp, sPerfo, sPersu, sRelig, sSleight, sStealth, sSurvival;
+	private JComboBox cbAlig, cbSize, cbType, cbSpellab;
+	private JSpinner sSpellDC, sAC, sHP, sStr, sDex, sCon, sInte, sWis, sCha, sSTStr, sSTDex, sSTCon, sSTInte, sSTWis, sSTCha, sAcrobatics, sAnimalHand, sArcana, sAtletics, sDeception, sHistory, sInsight, sIntim, sInves, sMedicine, sNature, sPercp, sPerfo, sPersu, sRelig, sSleight, sStealth, sSurvival;
 	private JCheckBox cbSpellcaster, cbLegendary;
 	private JTextField tfDmgVul;
 	private JTextField tfDmgRes;
@@ -59,6 +59,7 @@ public class MainWindow {
 	private JTextField tfAForm7;
 	private JTextField tfAToHit8;
 	private JTextField tfAForm8;
+	private JTextField tfSpellToHit;
 	
 	private void falseall() {
 		iniPanel.setVisible(false);
@@ -76,6 +77,7 @@ public class MainWindow {
 		cbAlig.setSelectedIndex(0);
 		cbSize.setSelectedIndex(0);
 		cbType.setSelectedIndex(0);
+		cbSpellab.setSelectedIndex(0);
 		
 		sAC.setValue(Integer.parseInt("0"));
 		sHP.setValue(Integer.parseInt("0"));
@@ -109,6 +111,7 @@ public class MainWindow {
 		sSleight.setValue(Integer.parseInt("0"));
 		sStealth.setValue(Integer.parseInt("0"));
 		sSurvival.setValue(Integer.parseInt("0"));
+		sSpellDC.setValue(Integer.parseInt("0"));
 		
 		lblStrMod.setText(null);
 		lblDexMod.setText(null);
@@ -154,6 +157,7 @@ public class MainWindow {
 		tfAForm6.setText(null);
 		tfAForm7.setText(null);
 		tfAForm8.setText(null);
+		tfSpellToHit.setText(null);
 		
 		taTraitD1.setText(null);
 		taTraitD2.setText(null);
@@ -1729,6 +1733,50 @@ public class MainWindow {
 		JPanel formMSpellcaster = new JPanel();
 		formMSpellcaster.setBackground(new Color(255, 228, 181));
 		frmDmHelper.getContentPane().add(formMSpellcaster, "name_1630098190459233");
+		formMSpellcaster.setLayout(null);
+		
+		JLabel lblSpellcaster = new JLabel("Spellcaster");
+		lblSpellcaster.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSpellcaster.setForeground(new Color(128, 0, 0));
+		lblSpellcaster.setFont(new Font("Palatino Linotype", Font.BOLD, 26));
+		lblSpellcaster.setBounds(414, 13, 446, 36);
+		formMSpellcaster.add(lblSpellcaster);
+		
+		JLabel lblSpellcasterAbility = new JLabel("Spellcaster Ability:");
+		lblSpellcasterAbility.setForeground(new Color(128, 0, 0));
+		lblSpellcasterAbility.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
+		lblSpellcasterAbility.setBounds(92, 52, 205, 26);
+		formMSpellcaster.add(lblSpellcasterAbility);
+		
+		cbSpellab = new JComboBox();
+		cbSpellab.setModel(new DefaultComboBoxModel(new String[] {"STR", "DEX", "CON", "INT", "WIS", "CHA"}));
+		cbSpellab.setSelectedIndex(0);
+		cbSpellab.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		cbSpellab.setBounds(309, 52, 68, 26);
+		formMSpellcaster.add(cbSpellab);
+		
+		JLabel lblSpellDc = new JLabel("Spell DC:");
+		lblSpellDc.setForeground(new Color(128, 0, 0));
+		lblSpellDc.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
+		lblSpellDc.setBounds(549, 52, 113, 26);
+		formMSpellcaster.add(lblSpellDc);
+		
+		sSpellDC = new JSpinner();
+		sSpellDC.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		sSpellDC.setBounds(662, 52, 49, 26);
+		formMSpellcaster.add(sSpellDC);
+		
+		JLabel lblSpellToHit = new JLabel("Spell To Hit:");
+		lblSpellToHit.setForeground(new Color(128, 0, 0));
+		lblSpellToHit.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
+		lblSpellToHit.setBounds(895, 52, 137, 26);
+		formMSpellcaster.add(lblSpellToHit);
+		
+		tfSpellToHit = new JTextField();
+		tfSpellToHit.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfSpellToHit.setBounds(1039, 52, 58, 26);
+		formMSpellcaster.add(tfSpellToHit);
+		tfSpellToHit.setColumns(10);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBackground(new Color(255, 228, 181));
