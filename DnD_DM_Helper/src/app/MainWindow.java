@@ -34,31 +34,31 @@ public class MainWindow {
 	private JTextField tfTraitN4;
 	private JTextField tfTraitN5;
 	private JTextField tfTraitN6;
-	private JTextArea taTraitD1, taTraitD2, taTraitD3, taTraitD4, taTraitD5, taTraitD6;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_14;
-	private JTextField textField_15;
-	private JTextField textField_16;
-	private JTextField textField_17;
-	private JTextField textField_18;
-	private JTextField textField_19;
-	private JTextField textField_20;
-	private JTextField textField_21;
-	private JTextField textField_22;
-	private JTextField textField_23;
+	private JTextArea taTraitD1, taTraitD2, taTraitD3, taTraitD4, taTraitD5, taTraitD6, taAD1, taAD2, taAD3, taAD4, taAD5, taAD6, taAD7, taAD8;
+	private JTextField tfAN1;
+	private JTextField tfAN2;
+	private JTextField tfAN3;
+	private JTextField tfAN4;
+	private JTextField tfAToHit1;
+	private JTextField tfAForm1;
+	private JTextField tfAToHit2;
+	private JTextField tfAForm2;
+	private JTextField tfAToHit3;
+	private JTextField tfAForm3;
+	private JTextField tfAToHit4;
+	private JTextField tfAForm4;
+	private JTextField tfAN5;
+	private JTextField tfAN6;
+	private JTextField tfAN7;
+	private JTextField tfAN8;
+	private JTextField tfAToHit5;
+	private JTextField tfAForm5;
+	private JTextField tfAToHit6;
+	private JTextField tfAForm6;
+	private JTextField tfAToHit7;
+	private JTextField tfAForm7;
+	private JTextField tfAToHit8;
+	private JTextField tfAForm8;
 	
 	private void falseall() {
 		iniPanel.setVisible(false);
@@ -130,6 +130,30 @@ public class MainWindow {
 		tfTraitN4.setText(null);
 		tfTraitN5.setText(null);
 		tfTraitN6.setText(null);
+		tfAN1.setText(null);
+		tfAN2.setText(null);
+		tfAN3.setText(null);
+		tfAN4.setText(null);
+		tfAN5.setText(null);
+		tfAN6.setText(null);
+		tfAN7.setText(null);
+		tfAN8.setText(null);
+		tfAToHit1.setText(null);
+		tfAToHit2.setText(null);
+		tfAToHit3.setText(null);
+		tfAToHit4.setText(null);
+		tfAToHit5.setText(null);
+		tfAToHit6.setText(null);
+		tfAToHit7.setText(null);
+		tfAToHit8.setText(null);
+		tfAForm1.setText(null);
+		tfAForm2.setText(null);
+		tfAForm3.setText(null);
+		tfAForm4.setText(null);
+		tfAForm5.setText(null);
+		tfAForm6.setText(null);
+		tfAForm7.setText(null);
+		tfAForm8.setText(null);
 		
 		taTraitD1.setText(null);
 		taTraitD2.setText(null);
@@ -137,6 +161,14 @@ public class MainWindow {
 		taTraitD4.setText(null);
 		taTraitD5.setText(null);
 		taTraitD6.setText(null);
+		taAD1.setText(null);
+		taAD2.setText(null);
+		taAD3.setText(null);
+		taAD4.setText(null);
+		taAD5.setText(null);
+		taAD6.setText(null);
+		taAD7.setText(null);
+		taAD8.setText(null);
 		
 		cbSpellcaster.setSelected(false);
 		cbLegendary.setSelected(false);
@@ -1285,29 +1317,29 @@ public class MainWindow {
 		lblFourthAction.setBounds(948, 72, 158, 26);
 		formM3Panel.add(lblFourthAction);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField.setBounds(150, 75, 133, 22);
-		formM3Panel.add(textField);
-		textField.setColumns(10);
+		tfAN1 = new JTextField();
+		tfAN1.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN1.setBounds(150, 75, 133, 22);
+		formM3Panel.add(tfAN1);
+		tfAN1.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_1.setColumns(10);
-		textField_1.setBounds(480, 75, 133, 22);
-		formM3Panel.add(textField_1);
+		tfAN2 = new JTextField();
+		tfAN2.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN2.setColumns(10);
+		tfAN2.setBounds(480, 75, 133, 22);
+		formM3Panel.add(tfAN2);
 		
-		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_2.setColumns(10);
-		textField_2.setBounds(789, 74, 133, 22);
-		formM3Panel.add(textField_2);
+		tfAN3 = new JTextField();
+		tfAN3.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN3.setColumns(10);
+		tfAN3.setBounds(789, 74, 133, 22);
+		formM3Panel.add(tfAN3);
 		
-		textField_3 = new JTextField();
-		textField_3.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_3.setColumns(10);
-		textField_3.setBounds(1109, 75, 133, 22);
-		formM3Panel.add(textField_3);
+		tfAN4 = new JTextField();
+		tfAN4.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN4.setColumns(10);
+		tfAN4.setBounds(1109, 75, 133, 22);
+		formM3Panel.add(tfAN4);
 		
 		JLabel lblDescription_1 = new JLabel("Description:");
 		lblDescription_1.setForeground(new Color(128, 0, 0));
@@ -1337,33 +1369,33 @@ public class MainWindow {
 		scrollPane_6.setBounds(12, 132, 271, 70);
 		formM3Panel.add(scrollPane_6);
 		
-		JTextArea textArea = new JTextArea();
-		scrollPane_6.setViewportView(textArea);
-		textArea.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		taAD1 = new JTextArea();
+		scrollPane_6.setViewportView(taAD1);
+		taAD1.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		
 		JScrollPane scrollPane_7 = new JScrollPane();
 		scrollPane_7.setBounds(310, 134, 303, 68);
 		formM3Panel.add(scrollPane_7);
 		
-		JTextArea textArea_1 = new JTextArea();
-		scrollPane_7.setViewportView(textArea_1);
-		textArea_1.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		taAD2 = new JTextArea();
+		scrollPane_7.setViewportView(taAD2);
+		taAD2.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		
 		JScrollPane scrollPane_8 = new JScrollPane();
 		scrollPane_8.setBounds(639, 134, 283, 68);
 		formM3Panel.add(scrollPane_8);
 		
-		JTextArea textArea_2 = new JTextArea();
-		scrollPane_8.setViewportView(textArea_2);
-		textArea_2.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		taAD3 = new JTextArea();
+		scrollPane_8.setViewportView(taAD3);
+		taAD3.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		
 		JScrollPane scrollPane_9 = new JScrollPane();
 		scrollPane_9.setBounds(948, 134, 294, 68);
 		formM3Panel.add(scrollPane_9);
 		
-		JTextArea textArea_3 = new JTextArea();
-		scrollPane_9.setViewportView(textArea_3);
-		textArea_3.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		taAD4 = new JTextArea();
+		scrollPane_9.setViewportView(taAD4);
+		taAD4.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		
 		JLabel lblToHit = new JLabel("To Hit:");
 		lblToHit.setForeground(new Color(128, 0, 0));
@@ -1371,11 +1403,11 @@ public class MainWindow {
 		lblToHit.setBounds(15, 212, 76, 26);
 		formM3Panel.add(lblToHit);
 		
-		textField_4 = new JTextField();
-		textField_4.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_4.setColumns(10);
-		textField_4.setBounds(94, 214, 54, 22);
-		formM3Panel.add(textField_4);
+		tfAToHit1 = new JTextField();
+		tfAToHit1.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit1.setColumns(10);
+		tfAToHit1.setBounds(94, 214, 54, 22);
+		formM3Panel.add(tfAToHit1);
 		
 		JLabel lblDiceFormula = new JLabel("Dice Formula:");
 		lblDiceFormula.setForeground(new Color(128, 0, 0));
@@ -1383,11 +1415,11 @@ public class MainWindow {
 		lblDiceFormula.setBounds(15, 251, 158, 26);
 		formM3Panel.add(lblDiceFormula);
 		
-		textField_5 = new JTextField();
-		textField_5.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_5.setColumns(10);
-		textField_5.setBounds(171, 253, 112, 22);
-		formM3Panel.add(textField_5);
+		tfAForm1 = new JTextField();
+		tfAForm1.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm1.setColumns(10);
+		tfAForm1.setBounds(171, 253, 112, 22);
+		formM3Panel.add(tfAForm1);
 		
 		JLabel label_14 = new JLabel("To Hit:");
 		label_14.setForeground(new Color(128, 0, 0));
@@ -1395,11 +1427,11 @@ public class MainWindow {
 		label_14.setBounds(311, 215, 76, 26);
 		formM3Panel.add(label_14);
 		
-		textField_6 = new JTextField();
-		textField_6.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_6.setColumns(10);
-		textField_6.setBounds(390, 217, 54, 22);
-		formM3Panel.add(textField_6);
+		tfAToHit2 = new JTextField();
+		tfAToHit2.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit2.setColumns(10);
+		tfAToHit2.setBounds(390, 217, 54, 22);
+		formM3Panel.add(tfAToHit2);
 		
 		JLabel label_15 = new JLabel("Dice Formula:");
 		label_15.setForeground(new Color(128, 0, 0));
@@ -1407,11 +1439,11 @@ public class MainWindow {
 		label_15.setBounds(311, 254, 158, 26);
 		formM3Panel.add(label_15);
 		
-		textField_7 = new JTextField();
-		textField_7.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_7.setColumns(10);
-		textField_7.setBounds(467, 256, 112, 22);
-		formM3Panel.add(textField_7);
+		tfAForm2 = new JTextField();
+		tfAForm2.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm2.setColumns(10);
+		tfAForm2.setBounds(467, 256, 112, 22);
+		formM3Panel.add(tfAForm2);
 		
 		JLabel label_16 = new JLabel("To Hit:");
 		label_16.setForeground(new Color(128, 0, 0));
@@ -1419,11 +1451,11 @@ public class MainWindow {
 		label_16.setBounds(639, 215, 76, 26);
 		formM3Panel.add(label_16);
 		
-		textField_8 = new JTextField();
-		textField_8.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_8.setColumns(10);
-		textField_8.setBounds(718, 217, 54, 22);
-		formM3Panel.add(textField_8);
+		tfAToHit3 = new JTextField();
+		tfAToHit3.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit3.setColumns(10);
+		tfAToHit3.setBounds(718, 217, 54, 22);
+		formM3Panel.add(tfAToHit3);
 		
 		JLabel label_17 = new JLabel("Dice Formula:");
 		label_17.setForeground(new Color(128, 0, 0));
@@ -1431,11 +1463,11 @@ public class MainWindow {
 		label_17.setBounds(639, 254, 158, 26);
 		formM3Panel.add(label_17);
 		
-		textField_9 = new JTextField();
-		textField_9.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_9.setColumns(10);
-		textField_9.setBounds(795, 256, 112, 22);
-		formM3Panel.add(textField_9);
+		tfAForm3 = new JTextField();
+		tfAForm3.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm3.setColumns(10);
+		tfAForm3.setBounds(795, 256, 112, 22);
+		formM3Panel.add(tfAForm3);
 		
 		JLabel label_18 = new JLabel("To Hit:");
 		label_18.setForeground(new Color(128, 0, 0));
@@ -1443,11 +1475,11 @@ public class MainWindow {
 		label_18.setBounds(948, 215, 76, 26);
 		formM3Panel.add(label_18);
 		
-		textField_10 = new JTextField();
-		textField_10.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_10.setColumns(10);
-		textField_10.setBounds(1027, 217, 54, 22);
-		formM3Panel.add(textField_10);
+		tfAToHit4 = new JTextField();
+		tfAToHit4.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit4.setColumns(10);
+		tfAToHit4.setBounds(1027, 217, 54, 22);
+		formM3Panel.add(tfAToHit4);
 		
 		JLabel label_19 = new JLabel("Dice Formula:");
 		label_19.setForeground(new Color(128, 0, 0));
@@ -1455,11 +1487,11 @@ public class MainWindow {
 		label_19.setBounds(948, 254, 158, 26);
 		formM3Panel.add(label_19);
 		
-		textField_11 = new JTextField();
-		textField_11.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_11.setColumns(10);
-		textField_11.setBounds(1104, 256, 112, 22);
-		formM3Panel.add(textField_11);
+		tfAForm4 = new JTextField();
+		tfAForm4.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm4.setColumns(10);
+		tfAForm4.setBounds(1104, 256, 112, 22);
+		formM3Panel.add(tfAForm4);
 		
 		JLabel lblFifthAction = new JLabel("Fifth Action:");
 		lblFifthAction.setForeground(new Color(128, 0, 0));
@@ -1485,29 +1517,29 @@ public class MainWindow {
 		lblEighthAction.setBounds(948, 374, 158, 26);
 		formM3Panel.add(lblEighthAction);
 		
-		textField_12 = new JTextField();
-		textField_12.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_12.setColumns(10);
-		textField_12.setBounds(154, 377, 133, 22);
-		formM3Panel.add(textField_12);
+		tfAN5 = new JTextField();
+		tfAN5.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN5.setColumns(10);
+		tfAN5.setBounds(154, 377, 133, 22);
+		formM3Panel.add(tfAN5);
 		
-		textField_13 = new JTextField();
-		textField_13.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_13.setColumns(10);
-		textField_13.setBounds(455, 377, 133, 22);
-		formM3Panel.add(textField_13);
+		tfAN6 = new JTextField();
+		tfAN6.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN6.setColumns(10);
+		tfAN6.setBounds(455, 377, 133, 22);
+		formM3Panel.add(tfAN6);
 		
-		textField_14 = new JTextField();
-		textField_14.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_14.setColumns(10);
-		textField_14.setBounds(815, 377, 107, 22);
-		formM3Panel.add(textField_14);
+		tfAN7 = new JTextField();
+		tfAN7.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN7.setColumns(10);
+		tfAN7.setBounds(815, 377, 107, 22);
+		formM3Panel.add(tfAN7);
 		
-		textField_15 = new JTextField();
-		textField_15.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_15.setColumns(10);
-		textField_15.setBounds(1109, 377, 133, 22);
-		formM3Panel.add(textField_15);
+		tfAN8 = new JTextField();
+		tfAN8.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAN8.setColumns(10);
+		tfAN8.setBounds(1109, 377, 133, 22);
+		formM3Panel.add(tfAN8);
 		
 		JLabel label_24 = new JLabel("Description:");
 		label_24.setForeground(new Color(128, 0, 0));
@@ -1539,11 +1571,11 @@ public class MainWindow {
 		label_28.setBounds(15, 514, 76, 26);
 		formM3Panel.add(label_28);
 		
-		textField_16 = new JTextField();
-		textField_16.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_16.setColumns(10);
-		textField_16.setBounds(94, 516, 54, 22);
-		formM3Panel.add(textField_16);
+		tfAToHit5 = new JTextField();
+		tfAToHit5.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit5.setColumns(10);
+		tfAToHit5.setBounds(94, 516, 54, 22);
+		formM3Panel.add(tfAToHit5);
 		
 		JLabel label_29 = new JLabel("Dice Formula:");
 		label_29.setForeground(new Color(128, 0, 0));
@@ -1551,11 +1583,11 @@ public class MainWindow {
 		label_29.setBounds(15, 553, 158, 26);
 		formM3Panel.add(label_29);
 		
-		textField_17 = new JTextField();
-		textField_17.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_17.setColumns(10);
-		textField_17.setBounds(171, 555, 112, 22);
-		formM3Panel.add(textField_17);
+		tfAForm5 = new JTextField();
+		tfAForm5.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm5.setColumns(10);
+		tfAForm5.setBounds(171, 555, 112, 22);
+		formM3Panel.add(tfAForm5);
 		
 		JLabel label_30 = new JLabel("To Hit:");
 		label_30.setForeground(new Color(128, 0, 0));
@@ -1563,11 +1595,11 @@ public class MainWindow {
 		label_30.setBounds(311, 517, 76, 26);
 		formM3Panel.add(label_30);
 		
-		textField_18 = new JTextField();
-		textField_18.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_18.setColumns(10);
-		textField_18.setBounds(390, 519, 54, 22);
-		formM3Panel.add(textField_18);
+		tfAToHit6 = new JTextField();
+		tfAToHit6.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit6.setColumns(10);
+		tfAToHit6.setBounds(390, 519, 54, 22);
+		formM3Panel.add(tfAToHit6);
 		
 		JLabel label_31 = new JLabel("Dice Formula:");
 		label_31.setForeground(new Color(128, 0, 0));
@@ -1575,11 +1607,11 @@ public class MainWindow {
 		label_31.setBounds(311, 556, 158, 26);
 		formM3Panel.add(label_31);
 		
-		textField_19 = new JTextField();
-		textField_19.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_19.setColumns(10);
-		textField_19.setBounds(467, 558, 112, 22);
-		formM3Panel.add(textField_19);
+		tfAForm6 = new JTextField();
+		tfAForm6.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm6.setColumns(10);
+		tfAForm6.setBounds(467, 558, 112, 22);
+		formM3Panel.add(tfAForm6);
 		
 		JLabel label_32 = new JLabel("To Hit:");
 		label_32.setForeground(new Color(128, 0, 0));
@@ -1587,11 +1619,11 @@ public class MainWindow {
 		label_32.setBounds(639, 517, 76, 26);
 		formM3Panel.add(label_32);
 		
-		textField_20 = new JTextField();
-		textField_20.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_20.setColumns(10);
-		textField_20.setBounds(718, 519, 54, 22);
-		formM3Panel.add(textField_20);
+		tfAToHit7 = new JTextField();
+		tfAToHit7.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit7.setColumns(10);
+		tfAToHit7.setBounds(718, 519, 54, 22);
+		formM3Panel.add(tfAToHit7);
 		
 		JLabel label_33 = new JLabel("Dice Formula:");
 		label_33.setForeground(new Color(128, 0, 0));
@@ -1599,11 +1631,11 @@ public class MainWindow {
 		label_33.setBounds(639, 556, 158, 26);
 		formM3Panel.add(label_33);
 		
-		textField_21 = new JTextField();
-		textField_21.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_21.setColumns(10);
-		textField_21.setBounds(795, 558, 112, 22);
-		formM3Panel.add(textField_21);
+		tfAForm7 = new JTextField();
+		tfAForm7.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm7.setColumns(10);
+		tfAForm7.setBounds(795, 558, 112, 22);
+		formM3Panel.add(tfAForm7);
 		
 		JLabel label_34 = new JLabel("To Hit:");
 		label_34.setForeground(new Color(128, 0, 0));
@@ -1611,11 +1643,11 @@ public class MainWindow {
 		label_34.setBounds(948, 517, 76, 26);
 		formM3Panel.add(label_34);
 		
-		textField_22 = new JTextField();
-		textField_22.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_22.setColumns(10);
-		textField_22.setBounds(1027, 519, 54, 22);
-		formM3Panel.add(textField_22);
+		tfAToHit8 = new JTextField();
+		tfAToHit8.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAToHit8.setColumns(10);
+		tfAToHit8.setBounds(1027, 519, 54, 22);
+		formM3Panel.add(tfAToHit8);
 		
 		JLabel label_35 = new JLabel("Dice Formula:");
 		label_35.setForeground(new Color(128, 0, 0));
@@ -1623,31 +1655,43 @@ public class MainWindow {
 		label_35.setBounds(948, 556, 158, 26);
 		formM3Panel.add(label_35);
 		
-		textField_23 = new JTextField();
-		textField_23.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textField_23.setColumns(10);
-		textField_23.setBounds(1104, 558, 112, 22);
-		formM3Panel.add(textField_23);
+		tfAForm8 = new JTextField();
+		tfAForm8.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		tfAForm8.setColumns(10);
+		tfAForm8.setBounds(1104, 558, 112, 22);
+		formM3Panel.add(tfAForm8);
 		
-		JTextArea textArea_4 = new JTextArea();
-		textArea_4.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textArea_4.setBounds(15, 433, 272, 68);
-		formM3Panel.add(textArea_4);
+		JScrollPane scrollPane_10 = new JScrollPane();
+		scrollPane_10.setBounds(15, 433, 272, 68);
+		formM3Panel.add(scrollPane_10);
 		
-		JTextArea textArea_5 = new JTextArea();
-		textArea_5.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textArea_5.setBounds(311, 433, 277, 68);
-		formM3Panel.add(textArea_5);
+		taAD5 = new JTextArea();
+		scrollPane_10.setViewportView(taAD5);
+		taAD5.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		
-		JTextArea textArea_6 = new JTextArea();
-		textArea_6.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textArea_6.setBounds(639, 433, 283, 68);
-		formM3Panel.add(textArea_6);
+		JScrollPane scrollPane_11 = new JScrollPane();
+		scrollPane_11.setBounds(311, 433, 277, 68);
+		formM3Panel.add(scrollPane_11);
 		
-		JTextArea textArea_7 = new JTextArea();
-		textArea_7.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		textArea_7.setBounds(947, 433, 295, 68);
-		formM3Panel.add(textArea_7);
+		taAD6 = new JTextArea();
+		scrollPane_11.setViewportView(taAD6);
+		taAD6.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		
+		JScrollPane scrollPane_12 = new JScrollPane();
+		scrollPane_12.setBounds(639, 433, 283, 68);
+		formM3Panel.add(scrollPane_12);
+		
+		taAD7 = new JTextArea();
+		scrollPane_12.setViewportView(taAD7);
+		taAD7.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
+		
+		JScrollPane scrollPane_13 = new JScrollPane();
+		scrollPane_13.setBounds(947, 433, 295, 68);
+		formM3Panel.add(scrollPane_13);
+		
+		taAD8 = new JTextArea();
+		scrollPane_13.setViewportView(taAD8);
+		taAD8.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
 		
 		JLabel lblNeedMoreActions = new JLabel("Need more Actions");
 		lblNeedMoreActions.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1681,6 +1725,10 @@ public class MainWindow {
 		label_22.setFont(new Font("Palatino Linotype", Font.BOLD, 26));
 		label_22.setBounds(1197, 699, 65, 27);
 		formM3Panel.add(label_22);
+		
+		JPanel formMSpellcaster = new JPanel();
+		formMSpellcaster.setBackground(new Color(255, 228, 181));
+		frmDmHelper.getContentPane().add(formMSpellcaster, "name_1630098190459233");
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBackground(new Color(255, 228, 181));
