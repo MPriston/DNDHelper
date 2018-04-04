@@ -11,15 +11,15 @@ import javax.swing.event.ChangeEvent;
 public class MainWindow {
 
 	private JFrame frmDmHelper;
-	private JPanel iniPanel, formMPanel, formM2Panel, formM3Panel, formMSpellcaster, formMLegendary;
+	private JPanel iniPanel, formMPanel, formM2Panel, formM3Panel, formMLegendary;
 	private JLabel quote, label_22, lblStrMod, lblDexMod, lblConMod, lblInteMod, lblWisMod, lblChaMod;
 	private JTextField tfMonst;
 	private JTextField tfHpF;
 	private JTextField tfHpB;
 	private JTextField tfSpeed;
-	private JComboBox cbAlig, cbSize, cbType, cbSpellab;
-	private JSpinner sSpellDC, sAC, sHP, sStr, sDex, sCon, sInte, sWis, sCha, sSTStr, sSTDex, sSTCon, sSTInte, sSTWis, sSTCha, sAcrobatics, sAnimalHand, sArcana, sAtletics, sDeception, sHistory, sInsight, sIntim, sInves, sMedicine, sNature, sPercp, sPerfo, sPersu, sRelig, sSleight, sStealth, sSurvival;
-	private JCheckBox cbSpellcaster, cbLegendary;
+	private JComboBox cbAlig, cbSize, cbType;
+	private JSpinner sAC, sHP, sStr, sDex, sCon, sInte, sWis, sCha, sSTStr, sSTDex, sSTCon, sSTInte, sSTWis, sSTCha, sAcrobatics, sAnimalHand, sArcana, sAtletics, sDeception, sHistory, sInsight, sIntim, sInves, sMedicine, sNature, sPercp, sPerfo, sPersu, sRelig, sSleight, sStealth, sSurvival;
+	private JCheckBox cbLegendary;
 	private JTextField tfDmgVul;
 	private JTextField tfDmgRes;
 	private JTextField tfDmgImm;
@@ -59,15 +59,13 @@ public class MainWindow {
 	private JTextField tfAForm7;
 	private JTextField tfAToHit8;
 	private JTextField tfAForm8;
-	private JTextField tfSpellToHit;
 	
 	private void falseall() {
 		iniPanel.setVisible(false);
 		formMPanel.setVisible(false);
 		formM2Panel.setVisible(false);
 		formM3Panel.setVisible(false);
-		formMSpellcaster.setVisible(true);
-		formMLegendary.setVisible(true);
+		formMLegendary.setVisible(false);
 	}
 	
 	private void cleanMForm() {
@@ -75,11 +73,11 @@ public class MainWindow {
 		tfHpF.setText(null);
 		tfHpB.setText(null);
 		tfSpeed.setText(null);
+		label_22.setText("Save");
 		
 		cbAlig.setSelectedIndex(0);
 		cbSize.setSelectedIndex(0);
 		cbType.setSelectedIndex(0);
-		cbSpellab.setSelectedIndex(0);
 		
 		sAC.setValue(Integer.parseInt("0"));
 		sHP.setValue(Integer.parseInt("0"));
@@ -113,7 +111,6 @@ public class MainWindow {
 		sSleight.setValue(Integer.parseInt("0"));
 		sStealth.setValue(Integer.parseInt("0"));
 		sSurvival.setValue(Integer.parseInt("0"));
-		sSpellDC.setValue(Integer.parseInt("0"));
 		
 		lblStrMod.setText(null);
 		lblDexMod.setText(null);
@@ -159,7 +156,6 @@ public class MainWindow {
 		tfAForm6.setText(null);
 		tfAForm7.setText(null);
 		tfAForm8.setText(null);
-		tfSpellToHit.setText(null);
 		
 		taTraitD1.setText(null);
 		taTraitD2.setText(null);
@@ -176,8 +172,11 @@ public class MainWindow {
 		taAD7.setText(null);
 		taAD8.setText(null);
 		
-		cbSpellcaster.setSelected(false);
 		cbLegendary.setSelected(false);
+	}
+	
+	private void saveMonster() {
+		System.out.println("so testando");
 	}
 	/**
 	 * Launch the application.
@@ -691,33 +690,17 @@ public class MainWindow {
 		lblMonsterInfo.setFont(new Font("Palatino Linotype", Font.BOLD, 26));
 		formMPanel.add(lblMonsterInfo);
 		
-		cbSpellcaster = new JCheckBox("Spellcaster");
-		cbSpellcaster.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if(cbSpellcaster.isSelected() || cbLegendary.isSelected()) {
-					label_22.setText("Next");
-				} else {
-					label_22.setText("Save");
-				}
-			}
-		});
-		cbSpellcaster.setBounds(147, 378, 151, 25);
-		cbSpellcaster.setBackground(new Color(255, 228, 181));
-		cbSpellcaster.setForeground(new Color(128, 0, 0));
-		cbSpellcaster.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
-		formMPanel.add(cbSpellcaster);
-		
 		cbLegendary = new JCheckBox("Legendary Actions");
 		cbLegendary.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(cbLegendary.isSelected() || cbSpellcaster.isSelected()) {
+				if(cbLegendary.isSelected()) {
 					label_22.setText("Next");
 				} else {
 					label_22.setText("Save");
 				}
 			}
 		});
-		cbLegendary.setBounds(147, 408, 241, 25);
+		cbLegendary.setBounds(147, 385, 241, 25);
 		cbLegendary.setForeground(new Color(128, 0, 0));
 		cbLegendary.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
 		cbLegendary.setBackground(new Color(255, 228, 181));
@@ -1730,13 +1713,11 @@ public class MainWindow {
 		label_22.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				if(cbSpellcaster.isSelected()) {
-					falseall();
-					formMSpellcaster.setVisible(true);
-				}
 				if(cbLegendary.isSelected()) {
 					falseall();
 					formMLegendary.setVisible(true);
+				} else {
+					saveMonster();
 				}
 			}
 		});
@@ -1745,57 +1726,17 @@ public class MainWindow {
 		label_22.setBounds(1197, 699, 65, 27);
 		formM3Panel.add(label_22);
 		
-		formMSpellcaster = new JPanel();
-		formMSpellcaster.setBackground(new Color(255, 228, 181));
-		frmDmHelper.getContentPane().add(formMSpellcaster, "name_1630098190459233");
-		formMSpellcaster.setLayout(null);
-		
-		JLabel lblSpellcaster = new JLabel("Spellcaster");
-		lblSpellcaster.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSpellcaster.setForeground(new Color(128, 0, 0));
-		lblSpellcaster.setFont(new Font("Palatino Linotype", Font.BOLD, 26));
-		lblSpellcaster.setBounds(414, 13, 446, 36);
-		formMSpellcaster.add(lblSpellcaster);
-		
-		JLabel lblSpellcasterAbility = new JLabel("Spellcaster Ability:");
-		lblSpellcasterAbility.setForeground(new Color(128, 0, 0));
-		lblSpellcasterAbility.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
-		lblSpellcasterAbility.setBounds(92, 52, 205, 26);
-		formMSpellcaster.add(lblSpellcasterAbility);
-		
-		cbSpellab = new JComboBox();
-		cbSpellab.setModel(new DefaultComboBoxModel(new String[] {"STR", "DEX", "CON", "INT", "WIS", "CHA"}));
-		cbSpellab.setSelectedIndex(0);
-		cbSpellab.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		cbSpellab.setBounds(309, 52, 68, 26);
-		formMSpellcaster.add(cbSpellab);
-		
-		JLabel lblSpellDc = new JLabel("Spell DC:");
-		lblSpellDc.setForeground(new Color(128, 0, 0));
-		lblSpellDc.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
-		lblSpellDc.setBounds(549, 52, 113, 26);
-		formMSpellcaster.add(lblSpellDc);
-		
-		sSpellDC = new JSpinner();
-		sSpellDC.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		sSpellDC.setBounds(662, 52, 49, 26);
-		formMSpellcaster.add(sSpellDC);
-		
-		JLabel lblSpellToHit = new JLabel("Spell To Hit:");
-		lblSpellToHit.setForeground(new Color(128, 0, 0));
-		lblSpellToHit.setFont(new Font("Palatino Linotype", Font.BOLD, 24));
-		lblSpellToHit.setBounds(895, 52, 137, 26);
-		formMSpellcaster.add(lblSpellToHit);
-		
-		tfSpellToHit = new JTextField();
-		tfSpellToHit.setFont(new Font("Palatino Linotype", Font.PLAIN, 20));
-		tfSpellToHit.setBounds(1039, 52, 58, 26);
-		formMSpellcaster.add(tfSpellToHit);
-		tfSpellToHit.setColumns(10);
-		
 		formMLegendary = new JPanel();
 		formMLegendary.setBackground(new Color(255, 228, 181));
 		frmDmHelper.getContentPane().add(formMLegendary, "name_1638253162384953");
+		formMLegendary.setLayout(null);
+		
+		JLabel lblLegendaryActions = new JLabel("Legendary Actions");
+		lblLegendaryActions.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLegendaryActions.setForeground(new Color(128, 0, 0));
+		lblLegendaryActions.setFont(new Font("Palatino Linotype", Font.BOLD, 26));
+		lblLegendaryActions.setBounds(414, 13, 446, 36);
+		formMLegendary.add(lblLegendaryActions);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBackground(new Color(255, 228, 181));
